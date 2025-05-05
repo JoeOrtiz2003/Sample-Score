@@ -1,0 +1,262 @@
+:root {
+    --table-font: MonserratSemiBold;
+    --secondary-font: Monserrat;
+    --slogan-color: #344B13;
+    --event-headline-color: white; /* Day Color Text */
+    --event-slogan-color: #344B13; /* Match Color Text */
+    --braket-header-color: #5E5143; /* Text Color Text */
+    --braket-header-primary-color: #FDDBB5; /* Border Color for Team - Total PTS */
+    --braket-header-secondary-color: #FDDBB5; /* Border Color for Rank */
+    --braket-primary-color: white;
+    --braket-secondary-color: white; /* Color Text Chicken */
+    --braket-odd-background-color: #7E6D5A;
+    --braket-even-background-color: #5E5143;
+    --svg-color: white; /* Color Chicken */
+}
+
+body {
+    margin: 0;
+    font-family: var(--secondary-font);
+    background-color: #f4f4f4;
+}
+
+.eventSlogan {
+    width: 100%; /* Make it span the full width */
+    height: auto; /* Adjust height dynamically */
+    color: var(--slogan-color);
+    background-repeat: no-repeat;
+    z-index: 10;
+    text-align: center; /* Center-align the text */
+    margin-bottom: 20px; /* Add spacing below the slogan */
+}
+
+.teamName {
+    font-weight: 100;
+    color: var(--braket-primary-color);
+    text-align: center;
+    max-width: 150px;
+    width: 100%;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+    white-space: normal; /* allow line breaks */
+    overflow: hidden;
+}
+
+.eventSloganInner {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    font-family: var(--secondary-font);
+}
+
+#eventSloganText {
+    text-align: center; /* Center-align the text */
+    line-height: 67px;
+    font-size: 67px;
+    font-weight: 700;
+    margin: 0 auto; /* Center the text block */
+}
+
+#eventHeadlingText {
+    display: none;
+}
+
+#eventName {
+    display: none;
+}
+
+.groupingWrapper {
+    display: flex;
+    margin-top: 85px;
+    gap: 22px;
+    z-index: 10;
+    justify-content: center; /* Center the grouping containers horizontally */
+}
+
+.innerGroupingWrapper {
+    display: flex;
+    width: 842px; /* Match the width of the braketHeader */
+    height: auto;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center; /* Vertically align the content */
+}
+
+.braketHeader {
+    display: flex;
+    width: 873px;
+    height: 49px;
+    gap: 3px;
+}
+
+.braketHeader > div {
+    display: flex;
+    height: 49px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--braket-header-color);
+    background-color: var(--braket-header-primary-color);
+}
+
+.braketHeader > div > p {
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.braketHeader > .braketHeaderRank {
+    width: 95px;
+    background-color: var(--braket-header-secondary-color);
+}
+
+.braketHeaderTeamName {
+    width: 225px;
+}
+
+.braketHeaderTeamPoint,
+.braketHeaderTeamElims,
+.braketHeaderTeamTotal {
+    width: 160px; /* Same width for all */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px; /* Slight padding for spacing */
+}
+
+.braketHeaderTeamPoint p,
+.braketHeaderTeamElims p,
+.braketHeaderTeamTotal p {
+    text-align: center;
+}
+
+.grouping {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    overflow: hidden;
+    width: 100%; /* Ensure grouping takes full width */
+    align-items: center; /* Center items horizontally */
+}
+
+.teamBraket {
+    display: flex;
+    width: 873px;
+    height: 66px;
+    gap: 3px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.teamBraket > div {
+    display: flex;
+    height: 66px;
+    padding: 10px;
+    align-items: center;
+    color: var(--braket-primary-color);
+}
+
+.teamBraket p {
+    line-height: 25px;
+    font-size: 24px;
+}
+
+.teamBraket:nth-child(odd) {
+    background-color: var(--braket-odd-background-color);
+}
+
+.teamBraket:nth-child(even) {
+    background-color: var(--braket-even-background-color);
+}
+
+.teamPositionWrapper {
+    width: 95px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamPositionIndicator {
+    line-height: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--braket-secondary-color);
+}
+
+.teamPosition {
+    width: 60px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+}
+
+.teamLogoWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    width: 225px;
+}
+
+
+.teamNoLogo {
+    width: 53px;
+    height: 53px;
+    background-color: #ccc;
+    border-radius: 50%;
+}
+
+.teamLogo {
+    width: 53px;
+    height: 53px;
+    object-fit: cover;
+}
+
+.teamPlacePointsWrapper,
+.teamElimsWrapper,
+.teamTotalWrapper {
+    width: 160px; /* Match header width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teamPlacePoints,
+.teamElims,
+.teamTotal {
+    font-size: 14px;
+    text-align: center;
+    line-height: 20px;
+    margin: 0;
+}
+
+.teamTotalWrapper {
+    width: 221px;
+    justify-content: center;
+    display: flex;
+    align-items: center; /* Ensure proper vertical alignment */
+}
+
+.teamChickenDinnerWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.teamChickenDinnerIMG {
+    fill: var(--svg-color);
+    width: 20px; /* Adjust size of the chicken dinner icon */
+    height: 20px;
+}
+.teamChickenDinnerWrapper {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100px; /* Consistent width for alignment */
+}
