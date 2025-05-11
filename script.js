@@ -1,6 +1,6 @@
 const sheetID = "1srwCRcCf_grbInfDSURVzXXRqIqxQ6_IIPG-4_gnSY8"; // Replace with your actual sheet ID
 const sheetName = "LIVE"; // Replace with your actual sheet tab name
-const query = "select AE, AO, AF, AH, AI, AK, AJ"; // Adjust to match your column setup
+const query = "select AE, AO, AG, AH, AI, AK, AJ"; // Adjust to match your column setup
 const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}&tq=${encodeURIComponent(query)}`;
 
 // Function to fetch data from Google Sheets and populate the table
@@ -63,9 +63,9 @@ async function fetchAndDisplayData() {
             `;
 
             // Assign rows to left or right grouping based on rank
-            if (index < 8) {
+            if (index < 9) {
                 leftGrouping.appendChild(teamBraket); // Ranks 1 to 8
-            } else if (index >= 8 && index < 16) {
+            } else if (index >= 8 && index < 18) {
                 rightGrouping.appendChild(teamBraket); // Ranks 9 to 16
             }
         });
