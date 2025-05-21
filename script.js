@@ -1,6 +1,6 @@
 const sheetID = "1srwCRcCf_grbInfDSURVzXXRqIqxQ6_IIPG-4_gnSY8"; // Replace with your actual sheet ID
 const sheetName = "LIVE"; // Replace with your actual sheet tab name
-const query = "select AE, AO, AG, AH, AI, AK, AJ"; // Adjust to match your column setup
+const query = "select AE, AO, AF, AH, AI, AK, AJ"; // Adjust to match your column setup
 const sheetURL = `https://docs.google.com/spreadsheets/d/${sheetID}/gviz/tq?tqx=out:json&sheet=${encodeURIComponent(sheetName)}&tq=${encodeURIComponent(query)}`;
 
 // Function to fetch data from Google Sheets and populate the table
@@ -78,5 +78,5 @@ async function fetchAndDisplayData() {
 
 // Call the function to fetch and display the data every 5 seconds
 fetchAndDisplayData(); // Initial fetch
-setInterval(fetchAndDisplayData, 10); // Auto-fetch every 5 seconds
+setInterval(fetchAndDisplayData, 10000); // Auto-fetch every 5 seconds
 

@@ -4,13 +4,13 @@
     --slogan-color: black;
     --event-headline-color: white; /* Day Color Text */
     --event-slogan-color: #344B13; /* Match Color Text */
-    --braket-header-color: Black; /* Text Color Text */
-    --braket-header-primary-color: #90b44d; /* Border Color for Team - Total PTS */
-    --braket-header-secondary-color: #90b44d; /* Border Color for Rank */
+    --braket-header-color: white; /* Text Color Text */
+    --braket-header-primary-color: #8b1816; /* Border Color for Team - Total PTS */
+    --braket-header-secondary-color: #8b1816; /* Border Color for Rank */
     --braket-primary-color: white;
     --braket-secondary-color: white; /* Color Text Chicken */
-    --braket-odd-background-color: #5e851e;
-    --braket-even-background-color: #28380b;
+    --braket-odd-background-color: #4d0b0b;
+    --braket-even-background-color: #641312;
     --svg-color: white; /* Color Chicken */
 }
 
@@ -40,9 +40,16 @@ body {
     overflow-wrap: break-word;
     word-wrap: break-word;
     hyphens: auto;
-    white-space: normal; /* allow line breaks */
+    white-space: normal;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
+    
+    /* Add this to remove any inline gap */
+    display: inline-block;
+    vertical-align: middle;
 }
+
 
 .eventSloganInner {
     display: flex;
@@ -141,7 +148,6 @@ body {
     gap: 4px;
     overflow: hidden;
     width: 100%; /* Ensure grouping takes full width */
-    align-items: center; /* Center items horizontally */
 }
 
 .teamBraket {
@@ -198,11 +204,9 @@ body {
 
 .teamLogoWrapper {
     display: flex;
-    align-items: center;
-    gap: 5px;
+    align-items: center;           /* Removed gap between logo and team name */
     width: 225px;
 }
-
 
 .teamNoLogo {
     width: 53px;
@@ -212,10 +216,12 @@ body {
 }
 
 .teamLogo {
+    vertical-align: middle;
     width: 53px;
     height: 53px;
     object-fit: cover;
 }
+
 
 .teamPlacePointsWrapper,
 .teamElimsWrapper,
