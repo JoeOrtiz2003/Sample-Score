@@ -5,12 +5,12 @@
     --event-headline-color: white; /* Day Color Text */
     --event-slogan-color: #344B13; /* Match Color Text */
     --braket-header-color: white; /* Text Color Text */
-    --braket-header-primary-color: #8b1816; /* Border Color for Team - Total PTS */
-    --braket-header-secondary-color: #8b1816; /* Border Color for Rank */
+    --braket-header-primary-color: #1093bb; /* Border Color for Team - Total PTS */
+    --braket-header-secondary-color: #1093bb; /* Border Color for Rank */
     --braket-primary-color: white;
     --braket-secondary-color: white; /* Color Text Chicken */
-    --braket-odd-background-color: #4d0b0b;
-    --braket-even-background-color: #641312;
+    --braket-odd-background-color: #07415c;
+    --braket-even-background-color: #0a6783;
     --svg-color: white; /* Color Chicken */
 }
 
@@ -33,21 +33,16 @@ body {
 .teamName {
     font-weight: 100;
     color: var(--braket-primary-color);
-    text-align: center;
+    text-align: left;
     max-width: 150px;
     width: 100%;
     line-height: 1.2;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    hyphens: auto;
-    white-space: normal;
-    overflow: hidden;
+    font-size: 0.5px; /* Slightly smaller text */
     margin: 0;
     padding: 0;
-    
-    /* Add this to remove any inline gap */
     display: inline-block;
     vertical-align: middle;
+    white-space: normal;
 }
 
 
@@ -169,7 +164,7 @@ body {
 
 .teamBraket p {
     line-height: 25px;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .teamBraket:nth-child(odd) {
@@ -204,9 +199,11 @@ body {
 
 .teamLogoWrapper {
     display: flex;
-    align-items: center;           /* Removed gap between logo and team name */
+    align-items: center;
     width: 225px;
+    margin-left: -15px; /* Adjust the value as needed */
 }
+
 
 .teamNoLogo {
     width: 53px;
@@ -224,13 +221,21 @@ body {
 
 
 .teamPlacePointsWrapper,
-.teamElimsWrapper,
+.teamElimsWrapper {
+    width: 160px; /* Match header width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .teamTotalWrapper {
     width: 160px; /* Match header width */
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 
 .teamPlacePoints,
 .teamElims,
