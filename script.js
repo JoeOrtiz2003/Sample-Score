@@ -78,5 +78,5 @@ async function fetchAndDisplayData() {
 
 // Call the function to fetch and display the data every 5 seconds
 fetchAndDisplayData(); // Initial fetch
-setInterval(fetchAndDisplayData, 50000); // Auto-fetch every 5 seconds
+setInterval(fetchAndDisplayData, 5000); // Auto-fetch every 5 seconds
 
