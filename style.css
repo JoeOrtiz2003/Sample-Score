@@ -5,12 +5,12 @@
     --event-headline-color: white; /* Day Color Text */
     --event-slogan-color: #344B13; /* Match Color Text */
     --braket-header-color: white; /* Text Color Text */
-    --braket-header-primary-color: #1093bb; /* Border Color for Team - Total PTS */
-    --braket-header-secondary-color: #1093bb; /* Border Color for Rank */
+    --braket-header-primary-color: #990000; /* Border Color for Team - Total PTS */
+    --braket-header-secondary-color: #990000; /* Border Color for Rank */
     --braket-primary-color: white;
     --braket-secondary-color: white; /* Color Text Chicken */
-    --braket-odd-background-color: #07415c;
-    --braket-even-background-color: #0a6783;
+    --braket-odd-background-color: #2b0001;
+    --braket-even-background-color: #4b0000;
     --svg-color: white; /* Color Chicken */
 }
 
@@ -34,11 +34,10 @@ body {
     font-weight: 100;
     color: var(--braket-primary-color);
     text-align: left;
-    max-width: 150px;
+    max-inline-size: 150px; /* limits max width in a writing-mode-aware way */
     width: 100%;
     line-height: 1.2;
-    font-size: 0.5px; /* Slightly smaller text */
-    margin: 0 0 0 20px; /* Added 10px left margin */
+    font-size: 0.5px;
     padding: 0;
     display: inline-block;
     vertical-align: middle;
@@ -158,7 +157,7 @@ body {
 .teamBraket > div {
     display: flex;
     height: 66px;
-    padding: 10px;
+    padding: 3px;
     align-items: center;
     color: var(--braket-primary-color);
 }
@@ -205,7 +204,6 @@ body {
     margin-left: -15px; /* Adjust the value as needed */
 }
 
-
 .teamNoLogo {
     width: 53px;
     height: 53px;
@@ -220,13 +218,30 @@ body {
     object-fit: cover;
 }
 
+/* New wrapper for place points and elims */
+.teamPointsElimsWrapper {
+    display: flex;
+    gap: 10px; /* Space between points and elims */
+    width: 320px; /* 160 + 160 */
+    justify-content: center;
+    align-items: center;
+}
 
-.teamPlacePointsWrapper,
+
 .teamElimsWrapper {
     width: 160px; /* Match header width */
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 0 0 15px; /* adds 15px left margin to move right */
+}
+
+.teamPlacePointsWrapper {
+    width: 160px; /* Match header width */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 15px; /* adds 15px left margin to move right */
 }
 
 
@@ -236,7 +251,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 .teamPlacePoints,
 .teamElims,
@@ -266,6 +280,7 @@ body {
     width: 20px; /* Adjust size of the chicken dinner icon */
     height: 20px;
 }
+
 .teamChickenDinnerWrapper {
     display: flex;
     justify-content: center; /* Center horizontally */
