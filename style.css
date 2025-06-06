@@ -41,7 +41,7 @@ body {
 
 .groupingWrapper {
     display: flex;
-    margin-top: 85px;
+    margin-top: 0px;
     gap: 22px;
     z-index: 10;
     justify-content: center; /* Center the grouping containers horizontally */
