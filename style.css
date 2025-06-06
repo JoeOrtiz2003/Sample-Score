@@ -1,9 +1,6 @@
 :root {
     --table-font: MonserratSemiBold;
-    --secondary-font: Monserrat;
-    --slogan-color: black;
-    --event-headline-color: white; /* Day Color Text */
-    --event-slogan-color: #344B13; /* Match Color Text */
+    --secondary-font: MonserratRegular;
     --braket-header-color: white; /* Text Color Text */
     --braket-header-primary-color: #098ab1; /* Border Color for Team - Total PTS */
     --braket-header-secondary-color: #098ab1; /* Border Color for Rank */
@@ -20,16 +17,6 @@ body {
     background-color: #f4f4f4;
 }
 
-.eventSlogan {
-    width: 100%; /* Make it span the full width */
-    height: auto; /* Adjust height dynamically */
-    color: var(--slogan-color);
-    background-repeat: no-repeat;
-    z-index: 10;
-    text-align: center; /* Center-align the text */
-    margin-bottom: 20px; /* Add spacing below the slogan */
-}
-
 .teamName {
     font-weight: 100;
     color: var(--braket-primary-color);
@@ -42,23 +29,6 @@ body {
     display: inline-block;
     vertical-align: middle;
     white-space: normal;
-}
-
-
-
-.eventSloganInner {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    font-family: var(--secondary-font);
-}
-
-#eventSloganText {
-    text-align: center; /* Center-align the text */
-    line-height: 67px;
-    font-size: 67px;
-    font-weight: 700;
-    margin: 0 auto; /* Center the text block */
 }
 
 #eventHeadlingText {
