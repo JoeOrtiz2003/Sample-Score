@@ -2,12 +2,12 @@
     --table-font: MonserratSemiBold;
     --secondary-font: MonserratRegular;
     --braket-header-color: white; /* Text Color Text */
-    --braket-header-primary-color: #098ab1; /* Border Color for Team - Total PTS */
-    --braket-header-secondary-color: #098ab1; /* Border Color for Rank */
+    --braket-header-primary-color: #139ead; /* Border Color for Team - Total PTS */
+    --braket-header-secondary-color: #139ead; /* Border Color for Rank */
     --braket-primary-color: white;
     --braket-secondary-color: white; /* Color Text Chicken */
-    --braket-odd-background-color: #0d738d;
-    --braket-even-background-color: #0c5a71;
+    --braket-odd-background-color: #214f8e;
+    --braket-even-background-color: #0b2350;
     --svg-color: white; /* Color Chicken */
 }
 
