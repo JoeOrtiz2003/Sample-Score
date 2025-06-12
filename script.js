@@ -63,9 +63,9 @@ async function fetchAndDisplayData() {
             `;
 
             // Assign rows to left or right grouping based on rank
-            if (index < 8) {
+            if (index < 9) {
                 leftGrouping.appendChild(teamBraket); // Ranks 1 to 8
-            } else if (index >= 8 && index < 16) {
+            } else if (index >= 8 && index < 18) {
                 rightGrouping.appendChild(teamBraket); // Ranks 9 to 16
             }
         });
@@ -79,3 +79,4 @@ async function fetchAndDisplayData() {
 // Call the function to fetch and display the data every 5 seconds
 fetchAndDisplayData(); // Initial fetch
 setInterval(fetchAndDisplayData, 5000); // Auto-fetch every 5 seconds
+
