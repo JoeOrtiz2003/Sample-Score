@@ -1,14 +1,14 @@
 :root {
     --table-font: MonserratSemiBold;
     --secondary-font: MonserratRegular;
-    --braket-header-color: white; /* Text Color Text */
-    --braket-header-primary-color: #49bcdb; /* Border Color for Team - Total PTS */
-    --braket-header-secondary-color: #49bcdb; /* Border Color for Rank */
+    --braket-header-color: black;
+    --braket-header-primary-color: #bfc0ff;
+    --braket-header-secondary-color: #bfc0ff;
     --braket-primary-color: white;
-    --braket-secondary-color: white; /* Color Text Chicken */
-    --braket-odd-background-color: #255868;
-    --braket-even-background-color: #1f6074;
-    --svg-color: white; /* Color Chicken */
+    --braket-secondary-color: white;
+    --braket-odd-background-color: #3f395f;
+    --braket-even-background-color: #4e486e;
+    --svg-color: white;
 }
 
 body {
@@ -17,11 +17,19 @@ body {
     background-color: #f4f4f4;
 }
 
+button {
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  display: block;
+}
+
 .teamName {
     font-weight: 100;
     color: var(--braket-primary-color);
     text-align: left;
-    max-inline-size: 150px; /* limits max width in a writing-mode-aware way */
+    max-inline-size: 150px;
     width: 100%;
     line-height: 1.2;
     font-size: 0.5px;
@@ -31,31 +39,29 @@ body {
     white-space: normal;
 }
 
-#eventHeadlingText {
-    display: none;
-}
-
+#eventHeadlingText,
 #eventName {
     display: none;
 }
 
+/* Layout Wrappers */
 .groupingWrapper {
     display: flex;
-    margin-top: 0px;
+    margin-top: 0;
     gap: 22px;
     z-index: 10;
-    justify-content: center; /* Center the grouping containers horizontally */
+    justify-content: center;
 }
 
 .innerGroupingWrapper {
     display: flex;
-    width: 842px; /* Match the width of the braketHeader */
-    height: auto;
+    width: 842px;
     flex-direction: column;
     gap: 4px;
-    justify-content: center; /* Vertically align the content */
+    justify-content: center;
 }
 
+/* Bracket Header */
 .braketHeader {
     display: flex;
     width: 873px;
@@ -93,12 +99,12 @@ body {
 .braketHeaderTeamPoint,
 .braketHeaderTeamElims,
 .braketHeaderTeamTotal {
-    width: 160px; /* Same width for all */
+    width: 160px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 5px; /* Slight padding for spacing */
+    padding: 0 5px;
 }
 
 .braketHeaderTeamPoint p,
@@ -107,14 +113,17 @@ body {
     text-align: center;
 }
 
+
+/* Grouping Container */
 .grouping {
     display: flex;
     flex-direction: column;
     gap: 4px;
     overflow: hidden;
-    width: 100%; /* Ensure grouping takes full width */
+    width: 100%;
 }
 
+/* Team Bracket Row */
 .teamBraket {
     display: flex;
     width: 873px;
@@ -133,10 +142,11 @@ body {
 }
 
 .teamBraket p {
-    line-height: px;
     font-size: 20px;
+    margin: 0;
 }
 
+/* Alternating Background */
 .teamBraket:nth-child(odd) {
     background-color: var(--braket-odd-background-color);
 }
@@ -145,6 +155,7 @@ body {
     background-color: var(--braket-even-background-color);
 }
 
+/* Column Styles */
 .teamPositionWrapper {
     width: 95px;
     text-align: center;
@@ -153,73 +164,56 @@ body {
     align-items: center;
 }
 
-.teamPositionIndicator {
-    line-height: 20px;
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--braket-secondary-color);
-}
-
 .teamPosition {
     width: 60px;
     text-align: center;
-    line-height: 30px;
     font-size: 30px;
+    line-height: 30px;
 }
 
 .teamLogoWrapper {
     display: flex;
     align-items: center;
     width: 225px;
-    margin-left: -15px; /* Adjust the value as needed */
-}
-
-.teamNoLogo {
-    width: 53px;
-    height: 53px;
-    background-color: #ccc;
-    border-radius: 50%;
+    margin-left: -15px;
 }
 
 .teamLogo {
-    vertical-align: middle;
     width: 53px;
     height: 53px;
     object-fit: cover;
+    margin-right: 10px;
 }
 
-/* New wrapper for place points and elims */
-.teamPointsElimsWrapper {
-    display: flex;
-    gap: 10px; /* Space between points and elims */
-    width: 320px; /* 160 + 160 */
-    justify-content: center;
-    align-items: center;
+.teamName {
+    font-weight: 100;
+    color: var(--braket-primary-color);
+    text-align: left;
+    max-inline-size: 150px;
+    width: 100%;
+    line-height: 1.2;
+    font-size: 16px;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
 }
 
-
+.teamPlacePointsWrapper,
 .teamElimsWrapper {
-    width: 160px; /* Match header width */
+    width: 160px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 0 0 15px; /* adds 15px left margin to move right */
+    margin-left: 15px;
 }
-
-.teamPlacePointsWrapper {
-    width: 160px; /* Match header width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 15px; /* adds 15px left margin to move right */
-}
-
 
 .teamTotalWrapper {
-    width: 160px; /* Match header width */
+    width: 221px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .teamPlacePoints,
@@ -231,18 +225,12 @@ body {
     margin: 0;
 }
 
-.teamTotalWrapper {
-    width: 221px;
-    justify-content: center;
-    display: flex;
-    align-items: center; /* Ensure proper vertical alignment */
-}
-
 .teamChickenDinnerWrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 5px;
+    width: 100px;
 }
 
 .teamChickenDinnerIMG {
@@ -251,9 +239,46 @@ body {
     height: 20px;
 }
 
-.teamChickenDinnerWrapper {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 100px; /* Consistent width for alignment */
+/* --- Animations for Show/Hide --- */
+@keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideInRight {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.95); }
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.5s forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.5s forwards;
+}
+
+.animate-slide-out {
+    animation: slideOut 0.3s forwards;
+}
+
+/* Hidden state */
+.hidden {
+    display: none !important;
+}
+
+/* One-by-One Fade-in Animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.teamBraket.animate-fade-in {
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
 }
