@@ -47,11 +47,11 @@ async function fetchAndDisplayData() {
         </div>
       `;
 
-      if (index < 9) {
+      if (index < 8) {
         teamBraket.style.animationDelay = `${index * 100}ms`;
         leftGrouping.appendChild(teamBraket);
-      } else if (index < 18) {
-        const i = index - 9;
+      } else if (index < 16) {
+        const i = index - 8;
         teamBraket.style.animationDelay = `${i * 100}ms`;
         rightGrouping.appendChild(teamBraket);
       }
